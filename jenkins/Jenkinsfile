@@ -1,0 +1,19 @@
+def branch = 'master'
+def scmUrl = 'git@github.com:SebastianGlonner/jenkins-pipeline-spring-example.git'
+def devServer = 'dev-myproject.mycompany.com'
+def devServerPort = '8080'
+
+pipeline {
+    agent any
+    stages {
+        stage('Stage 1') {
+            steps {
+                echo 'Hello world!'
+            }
+        }
+    }
+
+    stage('build') {
+      sh 'mvn clean package'
+    }
+}
