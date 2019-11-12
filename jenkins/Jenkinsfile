@@ -11,9 +11,9 @@ pipeline {
                 echo 'Hello world!'
             }
         }
-    }
 
-    stage('build') {
-      sh 'mvn clean package'
+        stage('build') {
+          sh 'mvn clean package'
+        }
     }
 }
